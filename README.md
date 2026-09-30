@@ -4,6 +4,7 @@
 ## INTRODUCTION
 
 Voici le processus de suivi de notre avancée dans la matière TI503N - Base De Données 1: Concepts de Base
+
 Contributeurs:
 - Kévin-Seng TEK (Yuyuuuu2)
 - Adame OUTMAITE (Adotm232)
