@@ -92,18 +92,18 @@ Ainsi nous avons obtenu le MCD suivant:
 
 
 Et dont le MLD est:
-Emplacement = (emplacement_id VARCHAR(20), code VARCHAR(20), zone VARCHAR(50));
-Fournisseur = (fournisseur_id VARCHAR(20), nom VARCHAR(80), pays VARCHAR(50), delai_livraison INT);
-Client = (client_id VARCHAR(20), nom VARCHAR(50), prenom VARCHAR(50), email VARCHAR(100), adresse VARCHAR(150));
-Entrepot = (entrepot_id VARCHAR(20), nom VARCHAR(80), adresse VARCHAR(150));
-Promotion = (promotion_id VARCHAR(20), taux_remise DECIMAL(5,2), date_debut DATE, date_fin DATE);
-Figurine = (figurine_id VARCHAR(20), figurine_licence VARCHAR(80), figurine_nom VARCHAR(150), figurine_personnage VARCHAR(80), figurine_fabricant VARCHAR(80), figurine_gamme VARCHAR(50), figurine_categorie VARCHAR(50), figurine_hauteur DECIMAL(5,2), figurine_date_sortie DATE, prix_ht DECIMAL(10,2), taux_tva DECIMAL(5,2), prix_ttc DECIMAL(10,2), variante_type VARCHAR(50), date_sortie_variante DATE, #figurine_id_1*);
-Commande = (commande_id VARCHAR(20), date_commande DATE, statut VARCHAR(20), mode_paiement VARCHAR(30), montant_paie DECIMAL(10,2), date_paiement DATE, #client_id);
-Livraison = (num_suivi VARCHAR(30), transporteur VARCHAR(50), date_livraison DATE, #commande_id);
-Stocker = (#emplacement_id, #entrepot_id, #figurine_id, quantite_stock INT, seuil_alerte INT);
-Fournir = (#fournisseur_id, #figurine_id, prix_achat DECIMAL(10,2), delai INT);
-Promouvoir = (#promotion_id, #figurine_id);
-Composer = (#figurine_id, #commande_id, quantite_commandee INT, prix_unitaire DECIMAL(10,2), taux_remise DECIMAL(5,2));
+- Emplacement = (emplacement_id VARCHAR(20), code VARCHAR(20), zone VARCHAR(50));
+- Fournisseur = (fournisseur_id VARCHAR(20), nom VARCHAR(80), pays VARCHAR(50), delai_livraison INT);
+- Client = (client_id VARCHAR(20), nom VARCHAR(50), prenom VARCHAR(50), email VARCHAR(100), adresse VARCHAR(150));
+- Entrepot = (entrepot_id VARCHAR(20), nom VARCHAR(80), adresse VARCHAR(150));
+- Promotion = (promotion_id VARCHAR(20), taux_remise DECIMAL(5,2), date_debut DATE, date_fin DATE);
+- Figurine = (figurine_id VARCHAR(20), figurine_licence VARCHAR(80), figurine_nom VARCHAR(150), figurine_personnage VARCHAR(80), figurine_fabricant VARCHAR(80), figurine_gamme VARCHAR(50), figurine_categorie VARCHAR(50), figurine_hauteur DECIMAL(5,2), figurine_date_sortie DATE, prix_ht DECIMAL(10,2), taux_tva DECIMAL(5,2), prix_ttc DECIMAL(10,2), variante_type VARCHAR(50), date_sortie_variante DATE, #figurine_id_1*);
+- Commande = (commande_id VARCHAR(20), date_commande DATE, statut VARCHAR(20), mode_paiement VARCHAR(30), montant_paie DECIMAL(10,2), date_paiement DATE, #client_id);
+- Livraison = (num_suivi VARCHAR(30), transporteur VARCHAR(50), date_livraison DATE, #commande_id);
+- Stocker = (#emplacement_id, #entrepot_id, #figurine_id, quantite_stock INT, seuil_alerte INT);
+- Fournir = (#fournisseur_id, #figurine_id, prix_achat DECIMAL(10,2), delai INT);
+- Promouvoir = (#promotion_id, #figurine_id);
+- Composer = (#figurine_id, #commande_id, quantite_commandee INT, prix_unitaire DECIMAL(10,2), taux_remise DECIMAL(5,2));
 
 
 
