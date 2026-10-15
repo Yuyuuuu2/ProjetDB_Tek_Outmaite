@@ -105,6 +105,18 @@ Et dont le MLD est:
 - Fournir = (#fournisseur_id, #figurine_id, prix_achat DECIMAL(10,2), delai INT);
 - Promouvoir = (#promotion_id, #figurine_id);
 - Composer = (#figurine_id, #commande_id, quantite_commandee INT, prix_unitaire DECIMAL(10,2), taux_remise DECIMAL(5,2));
+## Hypothèses retenues
+
+Afin de simplifier la modélisation tout en respectant les règles de gestion, plusieurs hypothèses ont été retenues :
+
+- Une figurine appartient à une seule licence, un seul personnage, une seule gamme et une seule catégorie.
+- Un client peut passer plusieurs commandes, mais une commande est associée à un seul client.
+- Chaque ligne de commande concerne une seule figurine.
+- Une livraison est toujours rattachée à une commande existante.
+- Les prix enregistrés dans les commandes correspondent aux prix appliqués au moment de l'achat afin de conserver l'historique.
+- Une même figurine peut être proposée par plusieurs fournisseurs.
+- Les stocks sont gérés par emplacement afin de permettre le suivi précis des quantités dans les entrepôts.
+`
 - ## Commentaires sur le MCD et le MLD
 
 Le modèle a été construit à partir du dictionnaire de données et des règles de gestion obtenus lors de la phase d'analyse.
