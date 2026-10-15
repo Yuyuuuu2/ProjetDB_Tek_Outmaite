@@ -105,6 +105,27 @@ Et dont le MLD est:
 - Fournir = (#fournisseur_id, #figurine_id, prix_achat DECIMAL(10,2), delai INT);
 - Promouvoir = (#promotion_id, #figurine_id);
 - Composer = (#figurine_id, #commande_id, quantite_commandee INT, prix_unitaire DECIMAL(10,2), taux_remise DECIMAL(5,2));
+- ## Commentaires sur le MCD et le MLD
+
+Le modèle a été construit à partir du dictionnaire de données et des règles de gestion obtenus lors de la phase d'analyse.
+
+Nous avons choisi de séparer les entités principales du domaine métier :
+
+- Figurine représente le produit vendu par l'entreprise.
+- Client représente les acheteurs.
+- Commande représente les achats effectués par les clients.
+- Livraison représente l'acheminement des commandes.
+- Fournisseur représente les partenaires qui approvisionnent l'entreprise.
+- Entrepôt et Emplacement permettent la gestion physique du stock.
+- Promotion permet d'appliquer des réductions sur certains produits.
+
+Gestion du stock
+
+La relation Stocker a été modélisée comme une association entre Emplacement, Entrepôt et Figurine.
+
+Cette association contient également les attributs quantite_stock et seuil_alerte.
+
+Ces données dépendent de l'emplacement de stockage et non de la figurine seule. Cela permet de suivre précisément le stock
 
 
 
