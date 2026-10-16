@@ -105,6 +105,7 @@ Et dont le MLD est:
 - Fournir = (#fournisseur_id, #figurine_id, prix_achat DECIMAL(10,2), delai INT);
 - Promouvoir = (#promotion_id, #figurine_id);
 - Composer = (#figurine_id, #commande_id, quantite_commandee INT, prix_unitaire DECIMAL(10,2), taux_remise DECIMAL(5,2));
+
 ## Hypothèses retenues
 
 Afin de simplifier la modélisation tout en respectant les règles de gestion, plusieurs hypothèses ont été retenues :
@@ -117,7 +118,7 @@ Afin de simplifier la modélisation tout en respectant les règles de gestion, p
 - Une même figurine peut être proposée par plusieurs fournisseurs.
 - Les stocks sont gérés par emplacement afin de permettre le suivi précis des quantités dans les entrepôts.
 `
-- ## Commentaires sur le MCD et le MLD
+## Commentaires sur le MCD et le MLD
 
 Le modèle a été construit à partir du dictionnaire de données et des règles de gestion obtenus lors de la phase d'analyse.
 
