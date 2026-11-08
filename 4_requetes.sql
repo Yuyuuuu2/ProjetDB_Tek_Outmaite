@@ -1,8 +1,4 @@
 
--- PROJET BASE DE DONNÉES : GESTION DE FIGURINES DE COLLECTION
--- Fichier contenant toutes les requêtes SQL
-
-
 -- 1. REQUÊTES SIMPLES (Filtres et Tri)
 
 
