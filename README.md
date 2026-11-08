@@ -143,3 +143,24 @@ Ces données dépendent de l'emplacement de stockage et non de la figurine seule
 
 
 ## PARTIE 2
+
+On met ensuite en place un scénario d’utilisation inspiré d’une situation réelle : on imagine un responsable logistique et commercial qui veut utiliser la base de données afin de :
+
+- Vérifier dans quels entrepôts et à quels emplacements sont stockées les figurines
+- Suivre les commandes des clients, leurs livraisons et leur statut
+- Analyser quelles figurines appartiennent à quelles licences, et quelles sont les variantes d’une figurine de base
+- Analyser les stocks disponibles et repérer les figurines à réapprovisionner
+- Étudier les statistiques de vente des différentes figurines
+
+Il peut donc être amené à rechercher :
+
+- La liste des figurines d’une licence donnée
+- Les figurines les plus chères
+- Les figurines dont le stock est inférieur ou égal au seuil d’alerte
+- L’état des stocks par entrepôt et par emplacement
+- Les variantes d’une figurine avec leur figurine de base
+- Les fournisseurs d’une figurine donnée
+- Le nombre de commandes passées par chaque client
+- Les figurines les plus vendues
+- La figurine la plus chère de chaque licence
+- Les commandes annulées ou en attente
