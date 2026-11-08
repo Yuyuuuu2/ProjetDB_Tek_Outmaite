@@ -1,5 +1,5 @@
 
--- 1. REQUÊTES SIMPLES (Filtres et Tri)
+-- 1. REQUÊTES SIMPLES 
 
 
 -- 1.1. Afficher toutes les figurines de la licence "Dragon Ball Z"
@@ -26,7 +26,7 @@ WHERE statut IN ('annulée', 'en attente');
 
 
 
--- 2. REQUÊTES AVEC JOINTURES (Relations entre tables)
+-- 2. REQUÊTES AVEC JOINTURES
 
 
 -- 2.1. Afficher le détail des commandes avec le nom et prénom du client
@@ -64,8 +64,7 @@ WHERE f1.figurine_id_1 IS NOT NULL;
 
 
 
--- 3. REQUÊTES D'AGRÉGATION (GROUP BY, SUM, COUNT)
-
+-- 3. REQUÊTES D'AGRÉGATION
 
 -- 3.1. Calculer le chiffre d'affaires total par mode de paiement
 SELECT mode_paiement, SUM(montant_paie) AS total_encaisse
@@ -95,7 +94,7 @@ WHERE statut = 'livrée';
 
 
 
--- 4. SOUS-REQUÊTES (Requêtes imbriquées)
+-- 4. SOUS-REQUÊTES
 
 -- 4.1. Trouver les clients qui n'ont jamais passé de commande
 SELECT nom, prenom, email 
@@ -120,7 +119,7 @@ WHERE prix_ttc = (
 
 
 
--- 5. REQUÊTES DE MODIFICATION (UPDATE / DELETE)
+-- 5. REQUÊTES DE MODIFICATION
 
 
 -- 5.1. Mettre à jour le statut d'une commande (Ex: passer CMD012 à 'payée')
@@ -141,7 +140,7 @@ DELETE FROM Commande WHERE commande_id = 'CMD007';
 
 
 
--- 6. CRÉATION D'UNE VUE (Pour faciliter les rapports)
+-- 6. VUE
 
 
 -- 6.1. Créer une vue récapitulative des commandes avec le total calculé des articles
@@ -158,5 +157,5 @@ JOIN Client cl ON c.client_id = cl.client_id
 JOIN Composer co ON c.commande_id = co.commande_id
 GROUP BY c.commande_id, c.date_commande, cl.nom, c.statut, c.montant_paie;
 
--- Pour afficher le résultat de la vue :
--- SELECT * FROM Vue_Recap_Commandes;
+SELECT * 
+FROM Vue_Recap_Commandes;
